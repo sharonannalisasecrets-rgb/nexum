@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nexum - Safety Intelligence for Redemption City</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Plus Jakarta Sans for a more modern UI feel -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                sans: ['"Plus Jakarta Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              },
+              colors: {
+                'nexum-blue': '#0047AB',
+                'nexum-dark-blue': '#003380',
+                'nexum-orange': '#FFA500',
+                'nexum-light-bg': '#FFFBF2',
+                'nexum-card-bg': '#F0F7FF',
+                'nexum-icon-bg': '#FFECD1'
+              }
+            }
+          }
+        }
+    </script>
+<style data-purpose="custom-layouts">.hero-image-bg {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(239, 246, 255, 0.88)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAYwGOK22-q1DQYz7mFflh5HGs7S7pKP5lSrrODhlPPeBXwjwXBx2lsJFbpLeYdJKehoE0rDPj5yISwsSU8w0fWWbjJMtoeO2ToXIZDEHOux-oEMArwqIAkXPE5aRSykxe4JbQHbwjaKuN38D9qmTTcbnZwcsA7MAgM9luEooXi2z-znjxn_n7LFwJqhbaDg5HWVWh44u5s5NoVmoBQ1S6aFrd_BxrGWZxB20pGKB_wVNO9104KFFuRlhCoTgnm5apFazu1o7h6RSc);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+    }
+.footer-cta-pattern {
+    background: linear-gradient(135deg, #0047AB 0%, #06F 100%);
+    position: relative;
+    overflow: hidden
+    }
+.footer-cta-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://www.transparenttextures.com/patterns/carbon-fibre.png);
+    opacity: 0.1
+    }</style>
+</head>
+<body class="font-sans text-slate-900 overflow-x-hidden">
+<!-- BEGIN: MainHeader -->
+<header class="bg-nexum-blue py-3 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50 shadow-md">
+<div class="flex items-center gap-2">
+<div class="bg-white p-2 rounded-md shadow-sm">
+<span class="font-extrabold text-nexum-blue text-sm tracking-tight">Nexum</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8 text-white text-sm font-semibold">
+<a class="hover:text-nexum-orange transition-colors flex items-center gap-1" href="#">Features <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+<a class="hover:text-nexum-orange transition-colors" href="#">Media</a>
+<a class="hover:text-nexum-orange transition-colors flex items-center gap-1" href="#">Properties <svg class="w-3 h-3" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+</nav>
+<div>
+<button class="bg-nexum-orange text-white px-5 py-2 rounded-lg text-sm font-bold hover:bg-orange-600 transition-all shadow-sm">
+                Login / Sign up
+            </button>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="hero-image-bg pt-24 pb-16 px-6 text-center relative" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(239, 246, 255, 0.6)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAlLtFxmuo7vwjGrCRnSRNHpXikf7J2QUOQC8ur_vDt5TT7V4k4fETRA-yhaGU5PVd5Ofx0RUmyzFmKaJDP4lp3LaI3hGT3Fx4rHdhXHiIIu1keseGCn7w9GMWDoAX132EXPQu8aRO8DyRi2WYCUH0c0oauWdGdILyIToYv8avaft74oiaY3MfayMgnSrVw5UhwY-BdMCxNa7y0MuXrwMeRT8epwsZ1M8M3hXeuxunTwk1WPt95BBfEYZ0cLCm00Djtix9ezOGX36M); background-size: cover; background-position: center; background-attachment: fixed;">
+<div class="max-w-4xl mx-auto relative z-10">
+<h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-[1.1] tracking-tight">
+                Safety Intelligence for <br/>
+<span class="text-nexum-blue">Redemption City</span>
+</h1>
+<p class="text-slate-700 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
+                Real-time emergency dispatch, automated escalation, and crowd coordination for the world's largest regular gathering — 5 million worshippers, one platform.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+<button class="bg-nexum-blue text-white px-10 py-4 rounded-xl font-bold shadow-2xl hover:bg-nexum-dark-blue hover:-translate-y-0.5 transition-all w-full sm:w-auto">Create Account</button>
+<button class="bg-white/80 backdrop-blur-sm border border-slate-200 text-slate-800 px-10 py-4 rounded-xl font-bold hover:bg-white transition-all w-full sm:w-auto shadow-lg">Browse Properties</button>
+</div>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto backdrop-blur-sm p-2 rounded-2xl">
+<div class="bg-nexum-blue/95 text-white p-6 rounded-xl shadow-xl flex flex-col justify-center">
+<span class="text-3xl md:text-4xl font-extrabold">5M+</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-80 mt-1">Peak worshippers</span>
+</div>
+<div class="bg-white/95 text-nexum-blue p-6 rounded-xl shadow-md border border-slate-100 flex flex-col justify-center">
+<span class="text-3xl md:text-4xl font-extrabold">2,500</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-500 mt-1">Hectares covered</span>
+</div>
+<div class="bg-white/95 text-nexum-blue p-6 rounded-xl shadow-md border border-slate-100 flex flex-col justify-center">
+<span class="text-3xl md:text-4xl font-extrabold">3s</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-slate-500 mt-1">Emergency dispatch</span>
+</div>
+<div class="bg-nexum-blue/95 text-white p-6 rounded-xl shadow-xl flex flex-col justify-center">
+<span class="text-3xl md:text-4xl font-extrabold">24/7</span>
+<span class="text-[10px] uppercase font-bold tracking-widest opacity-80 mt-1">Always active</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: CoordinationGapSection -->
+<section class="bg-nexum-light-bg py-24 px-6">
+<div class="max-w-5xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">The coordination gap Nexum closes</h2>
+<p class="text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Real-time emergency dispatch, automated escalation, and crowd coordination for the world's largest regular gathering — 5 million worshippers, one platform.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+<button class="bg-nexum-blue text-white px-8 py-3 rounded-lg font-bold shadow-md hover:bg-nexum-dark-blue transition-all">Create Account</button>
+<button class="bg-white border border-slate-200 text-slate-700 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 transition-all">Browse Properties</button>
+</div>
+<div class="grid md:grid-cols-3 gap-12 mt-16 text-center">
+<!-- Gap Item 1 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-nexum-icon-bg rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path></svg>
+</div>
+<h3 class="font-bold text-xl mb-4 text-slate-900">Manual response is too slow</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Locating a responder in a crowd of millions takes over 15 minutes. In cardiac arrest, every minute reduces survival rate by 10%.
+                    </p>
+</div>
+<!-- Gap Item 2 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-nexum-icon-bg rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+</div>
+<h3 class="font-bold text-xl mb-4 text-slate-900">Escalation depends on humans</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        No automated protocol exists to reward and route text-based emergencies or broadcast missing person alerts to every device inside camp.
+                    </p>
+</div>
+<!-- Gap Item 3 -->
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 bg-nexum-icon-bg rounded-2xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-7 h-7 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"></path></svg>
+</div>
+<h3 class="font-bold text-xl mb-4 text-slate-900">Infrastructure is invisible</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                        Guest properties operate with no unified security directory. Bookings happen through WhatsApp leading to leakage with no double booking protection.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CoordinationGapSection -->
+<!-- BEGIN: ModulesSection -->
+<section class="py-24 px-6 bg-white">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">One platform, every module</h2>
+<p class="text-slate-500 font-medium">Built specifically for Redemption City. Each module addresses a real operational failure.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<!-- Module 1: Emergency Dispatch -->
+<div class="bg-nexum-card-bg p-8 rounded-3xl flex flex-col h-full border border-blue-50 hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900">Emergency Dispatch</h3>
+<p class="text-slate-600 mb-6 leading-relaxed">One-tap emergency report. Server captures GPS, runs PostGIS proximity match, dispatches the nearest available officer within 3 seconds via SignalR WebSocket and FCM push.</p>
+<ul class="text-slate-600 space-y-3 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Medical &amp; security incidents</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Auto-dispatch to nearest officer</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Automated re-escalation at 2 minutes</li>
+</ul>
+<a class="mt-auto text-nexum-blue font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all group" href="#">Learn more <span class="group-hover:translate-x-1 transition-transform">→</span></a>
+</div>
+<!-- Module 2: Missing Persons -->
+<div class="bg-nexum-card-bg p-8 rounded-3xl flex flex-col h-full border border-blue-50 hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900">Missing Persons</h3>
+<p class="text-slate-600 mb-6 leading-relaxed">Geofenced broadcast of missing person alerts with photographs to every device inside camp simultaneously. Sightings reported with GPS coordinates update a live map for security officers.</p>
+<ul class="text-slate-600 space-y-3 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Photo broadcast to all camp users</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> GPS sighting reporting</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Live sightings map for officers</li>
+</ul>
+<a class="mt-auto text-nexum-blue font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all group" href="#">Learn more <span class="group-hover:translate-x-1 transition-transform">→</span></a>
+</div>
+<!-- Module 3: Smart Parking -->
+<div class="bg-nexum-card-bg p-8 rounded-3xl flex flex-col h-full border border-blue-50 hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900">Smart Parking</h3>
+<p class="text-slate-600 mb-6 leading-relaxed">Worshippers pin their car’s GPS location on arrival. Blocking vehicle reports trigger immediate owner notification. No response in 5 minutes escalates automatically to traffic wardens.</p>
+<ul class="text-slate-600 space-y-3 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> GPS car pin with photo</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Blocking vehicle alerts</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Auto-escalation to wardens</li>
+</ul>
+<a class="mt-auto text-nexum-blue font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all group" href="#">Learn more <span class="group-hover:translate-x-1 transition-transform">→</span></a>
+</div>
+<!-- Module 4: Transit & Shuttle Routing -->
+<div class="bg-nexum-card-bg p-8 rounded-3xl flex flex-col h-full border border-blue-50 hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6 shadow-sm">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 6c0-1.08 1.48-2 7-2s7 .92 7 2v5H5V6z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4 text-slate-900">Transit &amp; Shuttle Routing</h3>
+<p class="text-slate-600 mb-6 leading-relaxed">Shuttle dispatch via pgRouting over a digitised camp road network. Real-time congestion detection reroutes active journeys automatically. Admin can close road segments instantly.</p>
+<ul class="text-slate-600 space-y-3 mb-10 text-sm font-medium">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> GPS proximity dispatch</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Live congestion detection</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-nexum-blue rounded-full"></span> Dynamic route recalculation</li>
+</ul>
+<a class="mt-auto text-nexum-blue font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all group" href="#">Learn more <span class="group-hover:translate-x-1 transition-transform">→</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ModulesSection -->
+<!-- BEGIN: RolesSection -->
+<section class="py-24 px-6 bg-slate-50">
+<div class="max-w-6xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 tracking-tight">Built for every role</h2>
+<p class="text-slate-500 mb-16 font-medium">One app, personalised for how you serve the camp.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
+<!-- Role 1 -->
+<div class="flex flex-col items-center bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+</div>
+<h4 class="font-bold text-lg mb-3 text-slate-900">Worshipper</h4>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Report emergencies, find missing persons, pin your car, and book verified accommodation.</p>
+<a class="text-nexum-blue font-bold text-xs uppercase tracking-widest flex items-center gap-2 mt-auto" href="#">Learn more <span>→</span></a>
+</div>
+<!-- Role 2 -->
+<div class="flex flex-col items-center bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+</div>
+<h4 class="font-bold text-lg mb-3 text-slate-900">Medical Officer</h4>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Receive real-time dispatch alerts, manage incident cases, and locate nearest equipment.</p>
+<a class="text-nexum-blue font-bold text-xs uppercase tracking-widest flex items-center gap-2 mt-auto" href="#">Learn more <span>→</span></a>
+</div>
+<!-- Role 3 -->
+<div class="flex flex-col items-center bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"></path></svg>
+</div>
+<h4 class="font-bold text-lg mb-3 text-slate-900">Security Officer</h4>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Monitor missing person alerts, receive dispatch notifications, and coordinate responses.</p>
+<a class="text-nexum-blue font-bold text-xs uppercase tracking-widest flex items-center gap-2 mt-auto" href="#">Learn more <span>→</span></a>
+</div>
+<!-- Role 4 -->
+<div class="flex flex-col items-center bg-white p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-14 h-14 bg-nexum-icon-bg rounded-xl flex items-center justify-center mb-6">
+<svg class="w-6 h-6 text-yellow-700" fill="currentColor" viewbox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path></svg>
+</div>
+<h4 class="font-bold text-lg mb-3 text-slate-900">Shuttle Driver</h4>
+<p class="text-slate-500 text-sm mb-6 leading-relaxed">Accept pickup requests based on your location and navigate the camp road network.</p>
+<a class="text-nexum-blue font-bold text-xs uppercase tracking-widest flex items-center gap-2 mt-auto" href="#">Learn more <span>→</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RolesSection -->
+<!-- BEGIN: FooterCTA -->
+<section class="p-6 md:p-12 bg-white">
+<div class="footer-cta-pattern max-w-6xl mx-auto rounded-3xl py-16 px-6 text-center text-white shadow-2xl">
+<h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">
+                Looking for accommodation at <br/> Redemption City?
+            </h2>
+<p class="text-blue-100 mb-10 max-w-xl mx-auto text-lg">
+                Browse approved guest properties. No account needed to explore, only required when you book.
+            </p>
+<button class="bg-nexum-orange text-white px-10 py-4 rounded-xl font-bold shadow-xl hover:bg-orange-600 hover:scale-105 transition-all">
+                Browse Properties
+            </button>
+</div>
+</section>
+<!-- END: FooterCTA -->
+<!-- BEGIN: ProfessionalFooter -->
+<footer class="bg-slate-900 text-slate-300 pt-16 pb-8 px-6 md:px-12">
+<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-5 gap-12 mb-16">
+<div class="col-span-2 md:col-span-2">
+<div class="flex items-center gap-2 mb-6">
+<div class="bg-white p-2 rounded-md">
+<span class="font-black text-nexum-blue text-sm">Nexum</span>
+</div>
+</div>
+<p class="text-sm text-slate-400 max-w-xs leading-relaxed mb-6">
+                    Nexum is the safety intelligence backbone for Redemption City, coordinating millions of worshippers through advanced geospatial technology.
+                </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-nexum-blue transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center hover:bg-nexum-blue transition-colors" href="#">
+<svg class="w-4 h-4" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm">Platform</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Features</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Media</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Properties</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm">Company</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">About</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Partners</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold mb-6 text-sm">Legal</h5>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Cookies</a></li>
+<li><a class="hover:text-white transition-colors" href="#">SLA</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-6xl mx-auto pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+<p>© 2026 Nexum Intelligence. All rights reserved.</p>
+<div class="flex gap-8">
+<span>Designed for Redemption City</span>
+<span>Powered by Geospatial AI</span>
+</div>
+</div>
+</footer>
+<!-- END: ProfessionalFooter -->
+</body></html>

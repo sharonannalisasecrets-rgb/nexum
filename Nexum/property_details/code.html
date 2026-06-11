@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Canaan Lodge - Property Details | Nexum</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
+    }
+    .custom-shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+    .booking-card {
+      background-color: #ffffff;
+      border: 1px solid #f1f5f9;
+    }
+    .room-card {
+      border: 1px dashed #3b82f6;
+    }
+  </style>
+</head>
+<body class="text-slate-900 antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="max-w-7xl mx-auto mt-4 px-6">
+<nav class="bg-[#004aad] rounded-xl py-3 px-6 flex items-center justify-between shadow-lg">
+<div class="flex items-center space-x-2 bg-white rounded-lg px-4 py-2" data-purpose="logo-container">
+<div class="w-6 h-6 bg-gray-300 rounded-sm"></div>
+<span class="font-bold text-gray-800 tracking-tight text-lg">Nexum</span>
+</div>
+<div class="hidden md:flex space-x-8 text-white/90 font-semibold text-sm">
+<a class="hover:text-white transition-colors" href="#">Features</a>
+<a class="hover:text-white transition-colors" href="#">Modles</a>
+<a class="hover:text-white transition-colors border-b-2 border-white/50 pb-0.5" href="#">Properties</a>
+</div>
+<button class="bg-[#f59e0b] hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-lg transition-all shadow-md text-sm">
+        Login / Sign up
+      </button>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<main class="max-w-7xl mx-auto px-6 py-10">
+<!-- BEGIN: PropertyTitle -->
+<section class="mb-8">
+<h1 class="text-4xl font-extrabold text-gray-900 tracking-tight">Canaan Lodge</h1>
+<div class="flex items-center text-sm font-medium text-gray-500 mt-2">
+<span class="material-symbols-outlined text-gray-400 mr-1 text-lg">location_on</span>
+<span>8 Canaan Street, Zone A, Redemption City, Km 46 Lagos-Ibadan Expressway</span>
+</div>
+</section>
+<!-- END: PropertyTitle -->
+<!-- BEGIN: HeroContent -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+<!-- Left side: Image Carousel -->
+<div class="lg:col-span-2 relative">
+<div class="rounded-3xl overflow-hidden aspect-[16/10] shadow-xl border border-gray-100">
+<img alt="Canaan Lodge Building" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvRbx4pmkNU1yt6Z8Dt8MTXkt6Shm742q_SX8qgaEZy77ezFq6oUVZo1XHYdCcqKoz0xpaDtNiHB5FEMJG3BNUil9c4-BmVEPMf2vUpx4HpgwuUWkMXXY89hXxQtNuGougcsmCVu48wfp7f1k42G506VbZ7T2FOxlMaEPToS05-8lbUpOt4X737bdTpVfSZlr4iEw1QJagkbYaRkEVKUEkO0uzpO1kDsMHk2JElE7UIftrFIKGpbd-VikY"/>
+</div>
+<!-- Carousel Indicators -->
+<div class="flex justify-center mt-6 space-x-2">
+<span class="h-2 w-12 bg-[#004aad] rounded-full"></span>
+<span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+<span class="h-2 w-2 bg-gray-300 rounded-full"></span>
+</div>
+</div>
+<!-- Right side: About & Booking -->
+<div class="space-y-6">
+<!-- About Section -->
+<div class="bg-white p-8 rounded-3xl custom-shadow border border-gray-100">
+<h2 class="text-xl font-bold mb-4 tracking-tight">About this property</h2>
+<p class="text-gray-600 text-sm leading-relaxed mb-8">
+            Budget-friendly accommodation close to the Camp Arena. Shared facilities with hot water, clean bedding provided, and a communal kitchen. Ideal for solo worshippers and small groups on a budget.
+          </p>
+<div class="space-y-3">
+<div class="flex items-center space-x-3 bg-orange-50 px-4 py-3 rounded-xl border border-orange-100">
+<span class="material-symbols-outlined text-orange-600 text-lg">person</span>
+<span class="text-xs font-bold text-orange-800">Hosted by Blessing Afolabi</span>
+</div>
+<div class="flex items-center space-x-3 bg-gray-50 px-4 py-3 rounded-xl border border-gray-100">
+<span class="material-symbols-outlined text-gray-500 text-lg">notifications</span>
+<span class="text-xs font-bold text-gray-700">Last supervised: 02 May 2026</span>
+</div>
+</div>
+</div>
+<!-- Booking Form -->
+<div class="booking-card p-8 rounded-3xl custom-shadow">
+<h2 class="text-xl font-bold mb-1 tracking-tight">Book a Room</h2>
+<p class="text-gray-500 text-sm mb-8">You can seamlessly book an apartment</p>
+<form class="space-y-5">
+<div>
+<label class="block text-[11px] uppercase tracking-wider font-bold text-gray-400 mb-2">Select Room</label>
+<select class="w-full rounded-xl border-gray-200 text-sm font-medium text-gray-700 py-3 focus:ring-2 focus:ring-[#004aad] focus:border-[#004aad]">
+<option>Select a room type</option>
+<option>Single Room</option>
+<option>Twin Sharing Room</option>
+<option>Double Room</option>
+<option>Family Suite</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-[11px] uppercase tracking-wider font-bold text-gray-400 mb-2">Check In</label>
+<input class="w-full rounded-xl border-gray-200 text-sm font-medium py-3 focus:ring-2 focus:ring-[#004aad] focus:border-[#004aad]" placeholder="DD/MM/YYYY" type="text"/>
+</div>
+<div>
+<label class="block text-[11px] uppercase tracking-wider font-bold text-gray-400 mb-2">Check Out</label>
+<input class="w-full rounded-xl border-gray-200 text-sm font-medium py-3 focus:ring-2 focus:ring-[#004aad] focus:border-[#004aad]" placeholder="DD/MM/YYYY" type="text"/>
+</div>
+</div>
+<button class="w-full bg-[#004aad] text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-all shadow-lg text-base mt-2" type="submit">
+              Book Now
+            </button>
+<div class="flex items-center justify-center space-x-2 mt-4">
+<span class="text-[10px] text-gray-400 font-medium italic">Payment processed securely via Paystack</span>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- END: HeroContent -->
+<!-- BEGIN: AvailableRooms -->
+<section>
+<h2 class="text-3xl font-extrabold text-gray-900 tracking-tight mb-10">Available Room Types</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" data-purpose="room-grid">
+<!-- Room Card: Single -->
+<article class="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Single Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsTCCBa9WZdNZPQ7XGGrRCx8XuHRfNhiq75q6a0eQebPLPV6uCL4DmArel93D_PjZyYoYfQHMb6liFm0m1zRWmLFDg2K-DVhqiMk4imT0zcm0Zv1dWMG5AD0uQoniHfhPLpCpvP8C8qwrRch26Ywdls8lLtcDFDYnZ1Po4exUpLlBBm942K9hfAkIm21C8QPuwdKb4UAE6ttd244VO80PP7-_vmmbxYyHPiUEgjHgKECs3M_mIDz8H5Zss"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-gray-900 text-lg mb-2">Single Room</h3>
+<p class="text-xs text-gray-500 leading-relaxed font-medium mb-6">Compact single room with ceiling fan and shared bathroom facilities.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="flex items-center bg-orange-50 px-3 py-1.5 rounded-full text-[11px] font-bold text-orange-700 border border-orange-100">
+<span class="material-symbols-outlined text-[14px] mr-1">person</span>
+                Sleeps: 1
+              </div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-wider font-bold text-gray-400">per night</p>
+<p class="font-black text-xl text-[#004aad]">₦4,500</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Room Card: Twin Sharing -->
+<article class="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Twin Sharing Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtmfkMil8ncUUdcqc9mIwANGNlBAMvM5EV7ta0lguU5z2EKNESJ2H6yQLWeC-xqs9u6bU8P3xKVLnNOSyhofkDMeUtTxVgcHMAaF2lReizVHTsydY_iR3pCsD3ondiAGxcRP1zMthFwoH8NOv774hFBVGL6tbtuhnzNFSiWInTRGCY31tSfPIqG2dcFewGw_j_NB42MBOFHXnDlSoR_6J3eaNr_ARbSRorCNrEQm_McG40IR9DbGswKcA"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-gray-900 text-lg mb-2">Twin Sharing Room</h3>
+<p class="text-xs text-gray-500 leading-relaxed font-medium mb-6">Two single beds in a shared room, great for friends or siblings.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="flex items-center bg-orange-50 px-3 py-1.5 rounded-full text-[11px] font-bold text-orange-700 border border-orange-100">
+<span class="material-symbols-outlined text-[14px] mr-1">group</span>
+                Sleeps: 2
+              </div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-wider font-bold text-gray-400">per night</p>
+<p class="font-black text-xl text-[#004aad]">₦6,000</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Room Card: Double -->
+<article class="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Double Room" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLv9hdTCgYUaAeVgeN35jyqOycv31n0OHBOJ4E92wHw_khvOYr4HI8USCjxf-X6HIQj1wHhVbKErcSBFa13_TZ05DoJNvYQUJ2zoGAasfGuJMDTlfNRBCRZ1hbyJX13mBpZw5FoTUlNWbT088ie6JQXHfrbIG7NUX67NsDUcdVn-ziV8TIhGi7Rh1YNgnsw6iaUYK1l3oVy4jTnmspSjt8J1TGYPY2yB3D7WyvKlQO6ALN4yq_Iwqjx8TDk"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-gray-900 text-lg mb-2">Double Room</h3>
+<p class="text-xs text-gray-500 leading-relaxed font-medium mb-6">Spacious room with a queen bed and private bathroom, perfect for couples.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="flex items-center bg-orange-50 px-3 py-1.5 rounded-full text-[11px] font-bold text-orange-700 border border-orange-100">
+<span class="material-symbols-outlined text-[14px] mr-1">group</span>
+                Sleeps: 2
+              </div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-wider font-bold text-gray-400">per night</p>
+<p class="font-black text-xl text-[#004aad]">₦8,000</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Room Card: Family Suite -->
+<article class="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="aspect-[4/3] overflow-hidden">
+<img alt="Family Suite" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLsklruylz6G4UsQeqzqYa5ppRFivFPlUkJ97dut_8K0vA1M_zF2h143Me-U8T9tGfLMBsR8SHh5vvzCBoJGJ6zGxgFfO3kh5X3wUbPrKOljLHTB8gyrxpa_XuYfsuzQCTlfE6vsCj-_NWumP9-J3heAAGuJrdMwFIAL9E-FHQBWmX4YMr-vYU5cdleFhSKVdONZogoKSCwhkZE5ysB30NLmWKtWamKt5edWmfNMatE_WOdqBZjOReOeLzE"/>
+</div>
+<div class="p-6 flex-1 flex flex-col">
+<h3 class="font-bold text-gray-900 text-lg mb-2">Family Suite</h3>
+<p class="text-xs text-gray-500 leading-relaxed font-medium mb-6">Large suite featuring a king bed and a bunk bed, ideal for families.</p>
+<div class="mt-auto flex justify-between items-end">
+<div class="flex items-center bg-orange-50 px-3 py-1.5 rounded-full text-[11px] font-bold text-orange-700 border border-orange-100">
+<span class="material-symbols-outlined text-[14px] mr-1">family_restroom</span>
+                Sleeps: 4
+              </div>
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-wider font-bold text-gray-400">per night</p>
+<p class="font-black text-xl text-[#004aad]">₦12,000</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- END: AvailableRooms -->
+</main>
+<footer class="py-16 mt-20 border-t border-gray-100">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center space-x-2 grayscale opacity-50">
+<div class="w-6 h-6 bg-gray-300 rounded-sm"></div>
+<span class="font-bold text-gray-800 tracking-tight text-lg">Nexum</span>
+</div>
+<p class="text-gray-400 text-xs font-medium">© 2026 Nexum Accommodation Services. All rights reserved.</p>
+<div class="flex gap-6 text-gray-400 text-xs font-bold uppercase tracking-widest">
+<a class="hover:text-gray-900 transition-colors" href="#">Privacy</a>
+<a class="hover:text-gray-900 transition-colors" href="#">Terms</a>
+<a class="hover:text-gray-900 transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

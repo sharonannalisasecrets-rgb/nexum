@@ -1,0 +1,306 @@
+// This is your Prisma schema file.
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Generator
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+// Datasource
+
+datasource db {
+  provider = "postgresql"
+}
+
+// PostGIS types
+// If your Postgres does not have PostGIS enabled yet, migrations will fail until PostGIS is installed.
+// For local dev, enable the extension: CREATE EXTENSION IF NOT EXISTS postgis;
+
+enum Role {
+  worshipper
+  medical_officer
+  security_officer
+  driver
+  admin
+  host
+}
+
+enum IncidentStatus {
+  Pending
+  Dispatched
+  EnRoute
+  Resolved
+  Cancelled
+}
+
+enum AlertStatus {
+  Open
+  Found
+  Closed
+}
+
+enum ReportType {
+  Medical
+  Security
+}
+
+model User {
+  id        String   @id @default(cuid())
+  fullName  String
+  email     String   @unique
+  phoneNumber String?
+
+  role      Role
+
+  emergencyContactName  String?
+  emergencyContactPhone String?
+  estateOrZone          String?
+
+  passwordHash String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  incidentsAssigned  Incident[]       @relation("IncidentAssignees")
+  bookingsAsGuest    Booking[]       @relation("BookingGuest")
+  propertiesAsHost   Property[]      @relation("HostProperties")
+
+  vehiclesAsDriver   ShuttleVehicle[] @relation("DriverVehicles")
+
+  refreshTokens RefreshToken[]
+
+  bankAccounts BankAccount[]
+}
+
+
+model RefreshToken {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tokenHash    String   @unique
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+
+  // opposite relation on User: refreshTokens
+}
+
+
+model Incident {
+  id        String         @id @default(cuid())
+
+  reportType ReportType
+  status     IncidentStatus
+  priority   String
+
+  patientId   String
+  patientName String?
+  patientEmergencyContact String?
+
+  latitude  Float
+  longitude Float
+
+  description String?
+
+  assignedOfficerId String?
+  assignedOfficer   User?   @relation("IncidentAssignees", fields: [assignedOfficerId], references: [id])
+
+  createdAt   DateTime @default(now())
+  dispatchedAt DateTime?
+  resolvedAt  DateTime?
+}
+
+model MissingPersonAlert {
+  id           String     @id @default(cuid())
+
+  fullName     String
+  age          Int?
+  description  String
+  photoUrl     String?
+  lastSeenAreaText String?
+
+  status       AlertStatus @default(Open)
+  reportedBy   String
+
+  createdAt    DateTime @default(now())
+
+  sightings    Sighting[]
+
+  // computed in API; persisted here to avoid expensive counts
+  sightingCount Int @default(0)
+}
+
+model Sighting {
+  id        String   @id @default(cuid())
+  alertId   String
+  alert     MissingPersonAlert @relation(fields: [alertId], references: [id], onDelete: Cascade)
+
+  reportedBy String
+  latitude   Float
+  longitude  Float
+  locationDescription String?
+
+  createdAt DateTime @default(now())
+
+  @@index([alertId])
+}
+
+model Property {
+  id          String   @id @default(cuid())
+
+  name        String
+  description String
+  address     String
+
+  photoUrls   String[]
+
+  hostId      String
+  host        User     @relation("HostProperties", fields: [hostId], references: [id])
+
+  status      String
+  lastSupervisedAt DateTime?
+  nextSupervisionDue DateTime?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  roomTypes   RoomType[]
+  bookings    Booking[]
+}
+
+model RoomType {
+  id          String @id @default(cuid())
+
+  propertyId  String
+  property    Property @relation(fields: [propertyId], references: [id], onDelete: Cascade)
+
+  name        String
+  description String
+  capacity    Int
+  pricePerNight Int
+
+  amenities   String[]
+  photoUrls   String[]
+
+  roomBookings Booking[]
+
+  @@index([propertyId])
+}
+
+model Booking {
+  id        String @id @default(cuid())
+
+  guestId   String
+  guest     User @relation("BookingGuest", fields: [guestId], references: [id])
+
+  propertyId String
+  property   Property @relation(fields: [propertyId], references: [id])
+
+  roomTypeId String
+  roomType   RoomType @relation(fields: [roomTypeId], references: [id])
+
+  checkInDate  DateTime
+  checkOutDate DateTime
+
+  totalAmount  Int
+
+  status String
+
+  confirmationCode String? @unique
+  paystackReference String?
+  paidAt      DateTime?
+
+  guestName   String?
+  propertyName String?
+  roomTypeName String?
+
+  createdAt DateTime @default(now())
+}
+
+model GeofenceZone {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+
+  // PostGIS polygon
+  // Prisma uses Unsupported type mapping for geometry/geography.
+  // We'll store as Json to keep Prisma happy; real geometry parsing happens in the API.
+  boundary    Json
+
+  isActive    Boolean  @default(false)
+  activatedAt DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model CampNode {
+  id        String   @id @default(cuid())
+  label     String
+  nodeType  String
+
+  latitude  Float
+  longitude Float
+
+  isActive  Boolean @default(true)
+
+  edgesFrom CampEdge[] @relation("EdgeFrom")
+  edgesTo   CampEdge[] @relation("EdgeTo")
+}
+
+model CampEdge {
+  id       String @id @default(cuid())
+
+  fromNodeId String
+  toNodeId   String
+
+  fromNode CampNode @relation("EdgeFrom", fields: [fromNodeId], references: [id])
+  toNode   CampNode @relation("EdgeTo", fields: [toNodeId], references: [id])
+
+  roadType String
+  lengthM  Int
+
+  isActive Boolean @default(true)
+
+  closedAt DateTime?
+
+  @@index([fromNodeId])
+  @@index([toNodeId])
+}
+
+model ShuttleVehicle {
+  id           String @id @default(cuid())
+  driverId     String
+  driver       User @relation("DriverVehicles", fields: [driverId], references: [id])
+
+  registration String @unique
+  capacity     Int
+  status       String
+
+  latitude     Float?
+  longitude    Float?
+  lastSeenAt   DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BankAccount {
+  id           String @id @default(cuid())
+
+  hostId       String
+  host         User @relation(fields: [hostId], references: [id], onDelete: Cascade)
+
+  bankCode     String
+  accountNumber String
+
+  isActive     Boolean @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([hostId])
+  @@unique([hostId, accountNumber])
+}
+
