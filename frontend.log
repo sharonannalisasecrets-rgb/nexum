@@ -1,0 +1,74 @@
+
+> nexum-web@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 2.6s
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 540ms (264 modules)
+ GET /api/auth/csrf 200 in 1017ms
+ POST /api/auth/callback/credentials 302 in 18ms
+ POST /api/auth/signin?csrf=true 302 in 11ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 8ms
+ POST /api/auth/signin?csrf=true 302 in 8ms
+ POST /api/auth/signin?csrf=true 302 in 11ms
+ POST /api/auth/signin?csrf=true 302 in 8ms
+ POST /api/auth/signin?csrf=true 302 in 19ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 12ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 8ms
+ POST /api/auth/signin?csrf=true 302 in 5ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 9ms
+ POST /api/auth/signin?csrf=true 302 in 5ms
+ POST /api/auth/signin?csrf=true 302 in 5ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 5ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 10ms
+ POST /api/auth/signin?csrf=true 302 in 8ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 9ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 14ms
+ POST /api/auth/signin?csrf=true 302 in 5ms
+ POST /api/auth/signin?csrf=true 302 in 15ms
+ POST /api/auth/signin?csrf=true 302 in 14ms
+ POST /api/auth/signin?csrf=true 302 in 22ms
+ POST /api/auth/signin?csrf=true 302 in 37ms
+ POST /api/auth/signin?csrf=true 302 in 25ms
+ POST /api/auth/signin?csrf=true 302 in 101ms
+ POST /api/auth/signin?csrf=true 302 in 32ms
+ POST /api/auth/signin?csrf=true 302 in 10ms
+ POST /api/auth/signin?csrf=true 302 in 18ms
+ POST /api/auth/signin?csrf=true 302 in 11ms
+ POST /api/auth/signin?csrf=true 302 in 11ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 6ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 7ms
+ POST /api/auth/signin?csrf=true 302 in 11ms
+ GET /api/auth/session 200 in 29ms
+ GET /api/auth/csrf 200 in 15ms
+ POST /api/auth/signout 200 in 16ms
+ ✓ Compiled /src/middleware in 254ms (172 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 3.9s (928 modules)
+ GET /login?callbackUrl=%2Fhost%2Fproperties 200 in 4600ms
+ ✓ Compiled in 717ms (346 modules)
+ GET /api/auth/session 200 in 27ms
+ GET /api/auth/session 200 in 19ms

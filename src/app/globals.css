@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 15% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 15% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 15% 12%;
+    --primary: 215.1 100% 33.5%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38.8 100% 50.0%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 38.8 100% 50.0%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 215.1 100% 33.5%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* Leaflet map fix */
+.leaflet-container { z-index: 0; }
+.leaflet-pane { z-index: 0 !important; }
+.leaflet-top, .leaflet-bottom { z-index: 1 !important; }
+
+/* Helpers from static prototype for properties listing */
+.hero-gradient {
+  /* Reduced overlay opacity to make image more visible like the design */
+  background: linear-gradient(180deg, rgba(10, 68, 160, 0.4) 0%, rgba(0, 48, 115, 0.7) 100%), var(--hero-image, none);
+  background-size: cover;
+  background-position: center;
+}
+.stats-card-gradient {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

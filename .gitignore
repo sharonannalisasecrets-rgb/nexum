@@ -1,0 +1,24 @@
+# Next.js
+.next/
+out/
+build/
+
+# Dependencies
+node_modules/
+
+# Environment — NEVER commit
+.env
+.env.local
+.env.production
+.env.development.local
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
