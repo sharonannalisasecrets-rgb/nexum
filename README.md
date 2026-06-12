@@ -134,3 +134,66 @@ vercel --prod
 
 Set environment variables in Vercel dashboard. The `next.config.js` rewrites
 `/api/backend/*` to your backend API, keeping CORS clean.
+
+## How to use (local development)
+
+This project includes a backend (NestJS + Prisma + Postgres) and a Next.js frontend. Follow these steps to run everything locally and use the seeded demo accounts.
+
+1. Start Postgres (Docker)
+
+```bash
+docker run -d --name nexum-db \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=nexum_dev \
+  -p 5432:5432 postgres:15
+```
+
+2. Backend setup & seed
+
+```bash
+cd backend
+npm install
+# ensure prisma client is generated
+npx prisma generate
+# apply migrations
+npx prisma migrate deploy
+# seed database (creates demo users)
+npm run seed
+# start dev server on port 7001
+export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/nexum_dev"
+export PORT=7001
+npm run start:dev
+```
+
+3. Frontend
+
+```bash
+cd /workspaces/nexum
+npm install
+# ensure .env.local contains NEXT_PUBLIC_API_URL=http://localhost:7001 and NEXTAUTH_URL=http://localhost:3000
+npm run dev
+# open http://localhost:3000
+```
+
+4. Test login via curl (example)
+
+```bash
+curl -i -X POST http://localhost:7001/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@nexum.ng","password":"Nexum@Admin2026!"}'
+```
+
+Seeded demo accounts (email / password)
+
+- Admin: admin@nexum.ng / Nexum@Admin2026!
+- Worshipper: worshipper@nexum.ng / Nexum@2026!
+- Medical: medical@nexum.ng / Nexum@2026!
+- Security: security@nexum.ng / Nexum@2026!
+- Driver: driver@nexum.ng / Nexum@2026!
+- Host: host@nexum.ng / Nexum@2026!
+
+Notes
+- The frontend expects the backend API at `NEXT_PUBLIC_API_URL` (default `http://localhost:7001`).
+- NextAuth uses `NEXTAUTH_URL` and `NEXTAUTH_SECRET` from `.env.local`.
+- If you change ports, update `.env.local` and restart both services.

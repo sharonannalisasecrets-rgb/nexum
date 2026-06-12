@@ -31,6 +31,43 @@
 $ npm install
 ```
 
+## Local development & database
+
+Environment
+
+- Set `DATABASE_URL` to point to your local Postgres (example below).
+
+Start Postgres (Docker):
+
+```bash
+docker run -d --name nexum-db \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=nexum_dev \
+  -p 5432:5432 postgres:15
+```
+
+Run migrations, generate client and seed:
+
+```bash
+# from /workspaces/nexum/backend
+export DATABASE_URL="postgresql://postgres:postgres@localhost:5432/nexum_dev"
+npm install
+npx prisma generate
+npx prisma migrate deploy
+npm run seed
+```
+
+Start the backend (development, watches files):
+
+```bash
+export PORT=7001
+npm run start:dev
+# or production: npm run start:prod
+```
+
+The backend listens on `PORT` (default 7001 for local development in this repo). The frontend expects the API at `http://localhost:7001`.
+
 ## Compile and run the project
 
 ```bash
