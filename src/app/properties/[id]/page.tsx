@@ -7,17 +7,29 @@ import { PropertyGallery } from '@/components/shared/PropertyGallery';
 import { Badge, Card, CardContent } from '@/components/ui';
 import { Building2, MapPin, User } from 'lucide-react';
 import { formatDate } from '@/lib/utils';
+import SAMPLE_PROPERTIES from '@/lib/sample-properties';
 
 export default async function PropertyDetailPage({ params }: { params: { id: string } }) {
-  const [propertyRes, roomsRes] = await Promise.all([
+  const [propertyRes, roomsRes] = await Promise.allSettled([
     propertyApi.get(params.id),
     propertyApi.getRoomTypes(params.id),
   ]);
 
-  if (!propertyRes.success || !propertyRes.data) notFound();
+  let property: any = null;
+  let rooms: any[] = [];
 
-  const property = propertyRes.data;
-  const rooms = roomsRes.data ?? [];
+  if (propertyRes.status === 'fulfilled' && propertyRes.value.success && propertyRes.value.data) {
+    property = propertyRes.value.data;
+    rooms = roomsRes.status === 'fulfilled' && roomsRes.value.data ? roomsRes.value.data : [];
+  } else {
+    const found = SAMPLE_PROPERTIES.find(p => p.id === params.id);
+    if (found) {
+      property = found;
+      rooms = [];
+    }
+  }
+
+  if (!property) notFound();
   const session = await getServerSession(authOptions);
 
   return (
@@ -27,6 +39,9 @@ export default async function PropertyDetailPage({ params }: { params: { id: str
         <div className="flex items-start justify-between">
           <div>
             <h1 className="text-2xl font-bold">{property.name}</h1>
+            <div className="mt-2">
+              <a href="/properties" className="text-sm text-primary hover:underline">← Back to Properties</a>
+            </div>
             <div className="flex items-center gap-1.5 text-muted-foreground mt-1">
               <MapPin className="h-4 w-4" />
               <span className="text-sm">{property.address}</span>

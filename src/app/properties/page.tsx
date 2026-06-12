@@ -49,7 +49,8 @@ export default async function PropertiesPage({
     { id: 'sample-16', name: 'Makun City Complex Short-Lets', description: 'Lagos-Ibadan Expressway, near RCCG Youth Centre, Mowe, Ogun State.', address: 'Lagos-Ibadan Expressway, near RCCG Youth Centre, Mowe, Ogun State.', photoUrls: ['https://lh3.googleusercontent.com/aida-public/AB6AXuAmZRe2YYFT_3RGswpviSXmE3DEKylfBB3a2YglAX-poYVjGDYQSctcGMqqoJK9A6QTPYdeYT_uqkNNIkWqdpezvL841xVA1Jc6Lr9l2hcafYNTDObR5wrqB-N1I4sKXCtRX35e19eLk7R3kamrpbRQw9wLpTmgZ38xv0sDDx1HEPgXx8QWzH1ViEtQvF0h8rEa5DDOek4igkiZxOWyRgFLV_FJNK5e3mLW_TbBqJ0SLlVwkrilEqAUO2i6IVJpTfwEaqQr6JkP2js'], hostId: 'host-16', hostName: 'Oluwajuwon Oyelami', status: 'Published' },
   ];
 
-  if (backendOffline && properties.length === 0) {
+  // Show sample properties when no properties were returned
+  if (properties.length === 0) {
     properties = SAMPLE_PROPERTIES;
   }
 

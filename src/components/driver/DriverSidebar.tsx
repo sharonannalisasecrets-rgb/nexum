@@ -24,7 +24,7 @@ export function DriverSidebar({ user }: { user: { name?: string | null; email?: 
             'flex items-center gap-2.5 px-3 py-2 rounded-md text-sm transition-colors',
             pathname.startsWith('/driver/rides')
               ? 'bg-white/15 text-white font-medium'
-              : 'text-primary/80 hover:bg-white/10'
+              : 'text-white/80 hover:bg-white/10'
           )}>
           <Car className="h-4 w-4" />
           My Rides
@@ -32,8 +32,8 @@ export function DriverSidebar({ user }: { user: { name?: string | null; email?: 
       </nav>
       <div className="p-3 border-t border-white/10">
         <div className="text-sm font-medium truncate">{user.name}</div>
-        <button onClick={() => signOut({ callbackUrl: '/login' })}
-          className="mt-2 flex items-center gap-2 text-xs text-orange-200 hover:text-white transition-colors">
+            <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/login', redirect: true })}
+              className="mt-2 flex items-center gap-2 text-xs text-orange-200 hover:text-white transition-colors">
           <LogOut className="h-3.5 w-3.5" /> Sign out
         </button>
       </div>

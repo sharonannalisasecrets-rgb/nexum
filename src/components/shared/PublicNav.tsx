@@ -22,7 +22,7 @@ export function PublicNav({ session }: { session: Session | null }) {
           {/* Nav links */}
           <nav className="flex items-center gap-1">
             <Link href="/properties"
-              className="text-sm text-primary/80 hover:text-white px-3 py-1.5 rounded hover:bg-white/10 transition-colors">
+              className="text-sm text-white/80 hover:text-white px-3 py-1.5 rounded hover:bg-white/10 transition-colors">
               Browse Properties
             </Link>
 
@@ -40,7 +40,7 @@ export function PublicNav({ session }: { session: Session | null }) {
                     <div className="text-xs font-medium">{session.user.name}</div>
                     <div className="text-[10px] text-orange-200">{roleName(session.user.role)}</div>
                   </div>
-                  <button onClick={() => signOut({ callbackUrl: '/login' })}
+                  <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/login', redirect: true })}
                     className="p-1.5 rounded hover:bg-white/10 text-orange-200 hover:text-white transition-colors">
                     <LogOut className="h-4 w-4" />
                   </button>
@@ -49,7 +49,7 @@ export function PublicNav({ session }: { session: Session | null }) {
             ) : (
               <div className="flex items-center gap-2 ml-3">
                 <Link href="/login">
-                  <Button variant="ghost" size="sm" className="text-primary/80 hover:text-white hover:bg-white/10">
+                  <Button variant="ghost" size="sm" className="text-white/80 hover:text-white hover:bg-white/10">
                     Sign In
                   </Button>
                 </Link>

@@ -25,7 +25,7 @@ export function OfficerSidebar({ user }: { user: { name?: string | null; email?:
           <Shield className="h-5 w-5 text-orange-200" />
           <span className="font-bold">Nexum</span>
         </div>
-        <div className="text-xs text-primary/70 mt-1">{roleName(user.role)}</div>
+        <div className="text-xs text-orange-200 mt-1">{roleName(user.role)}</div>
       </div>
       <nav className="flex-1 p-3 space-y-1">
         {nav.map(item => {
@@ -35,7 +35,7 @@ export function OfficerSidebar({ user }: { user: { name?: string | null; email?:
             <Link key={item.href} href={item.href}
               className={cn(
                 'flex items-center gap-2.5 px-3 py-2 rounded-md text-sm transition-colors',
-                active ? 'bg-white/15 text-white font-medium' : 'text-primary/80 hover:bg-white/10'
+                active ? 'bg-white/15 text-white font-medium' : 'text-white/80 hover:bg-white/10'
               )}>
               <Icon className="h-4 w-4" />
               {item.label}
@@ -45,8 +45,8 @@ export function OfficerSidebar({ user }: { user: { name?: string | null; email?:
       </nav>
       <div className="p-3 border-t border-white/10">
         <div className="text-sm font-medium truncate">{user.name}</div>
-        <button onClick={() => signOut({ callbackUrl: '/login' })}
-          className="mt-2 flex items-center gap-2 text-xs text-primary/70 hover:text-white">
+        <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000/login', redirect: true })}
+          className="mt-2 flex items-center gap-2 text-xs text-orange-200 hover:text-white">
           <LogOut className="h-3.5 w-3.5" /> Sign out
         </button>
       </div>

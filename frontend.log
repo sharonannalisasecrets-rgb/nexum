@@ -72,3 +72,186 @@
  ✓ Compiled in 717ms (346 modules)
  GET /api/auth/session 200 in 27ms
  GET /api/auth/session 200 in 19ms
+ ○ Compiling / ...
+ ✓ Compiled / in 607ms (914 modules)
+ GET / 200 in 767ms
+ ✓ Compiled /api/auth/[...nextauth] in 104ms (585 modules)
+ GET /api/auth/session 200 in 176ms
+ GET /api/auth/session 200 in 8ms
+ ✓ Compiled /properties in 422ms (925 modules)
+API REQUEST {
+  url: 'http://localhost:7001/properties?page=1&pageSize=16',
+  method: 'GET'
+}
+API RESPONSE {
+  url: 'http://localhost:7001/properties?page=1&pageSize=16',
+  status: 404,
+  body: {
+    message: 'Cannot GET /properties?page=1&pageSize=16',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+ GET /login?_rsc=1ebxd 200 in 15ms
+ GET /api/auth/providers 200 in 24ms
+ GET /api/auth/csrf 200 in 11ms
+API REQUEST { url: 'http://localhost:7001/auth/login', method: 'POST' }
+API RESPONSE {
+  url: 'http://localhost:7001/auth/login',
+  status: 201,
+  body: {
+    success: true,
+    data: {
+      user: [Object],
+      accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJzZWVkXzU0NTM3ZWMwLTk0OGQtNDZmZS1hZDEzLWUzNGRlYWQxNDc1MCIsImlkIjoic2VlZF81NDUzN2VjMC05NDhkLTQ2ZmUtYWQxMy1lMzRkZWFkMTQ3NTAiLCJlbWFpbCI6ImFkbWluQG5leHVtLm5nIiwiZnVsbE5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MTI4ODM2MiwiZXhwIjoxNzgxMjg5MjYyfQ.O3RfPzmu2umPYQCOwiik6lVMiD241jyflGDGv0nlZpc',
+      refreshToken: 'rt_seed_54537ec0-948d-46fe-ad13-e34dead14750_1781288362096_e42a5bb3037448',
+      expiresIn: 900
+    },
+    meta: { timestamp: '2026-06-12T18:19:22.105Z', requestId: 'auth.login' }
+  }
+}
+authorize: success {
+  user: {
+    id: 'seed_54537ec0-948d-46fe-ad13-e34dead14750',
+    name: 'Admin',
+    email: 'admin@nexum.ng',
+    role: 'admin',
+    accessToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJzZWVkXzU0NTM3ZWMwLTk0OGQtNDZmZS1hZDEzLWUzNGRlYWQxNDc1MCIsImlkIjoic2VlZF81NDUzN2VjMC05NDhkLTQ2ZmUtYWQxMy1lMzRkZWFkMTQ3NTAiLCJlbWFpbCI6ImFkbWluQG5leHVtLm5nIiwiZnVsbE5hbWUiOiJBZG1pbiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc4MTI4ODM2MiwiZXhwIjoxNzgxMjg5MjYyfQ.O3RfPzmu2umPYQCOwiik6lVMiD241jyflGDGv0nlZpc',
+    refreshToken: 'rt_seed_54537ec0-948d-46fe-ad13-e34dead14750_1781288362096_e42a5bb3037448'
+  }
+}
+ POST /api/auth/callback/credentials 200 in 127ms
+ GET /api/auth/session 200 in 12ms
+ GET /?_rsc=r3yhw 200 in 71ms
+ GET /?_rsc=r3yhw 200 in 24ms
+ ○ Compiling /admin/dashboard ...
+ ✓ Compiled /admin/dashboard in 999ms (1004 modules)
+API REQUEST {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  method: 'GET'
+}
+API REQUEST {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  method: 'GET'
+}
+API RESPONSE {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /emergency/incidents?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+API RESPONSE {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /alerts/missing-persons?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+ GET /admin/dashboard?_rsc=1iyah 200 in 40ms
+ ✓ Compiled in 751ms (1014 modules)
+API REQUEST {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  method: 'GET'
+}
+API REQUEST {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  method: 'GET'
+}
+API RESPONSE {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /emergency/incidents?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+API RESPONSE {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /alerts/missing-persons?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+ GET /admin/dashboard?_rsc=84jn9 200 in 192ms
+ ✓ Compiled in 206ms (364 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 213ms (654 modules)
+API REQUEST {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  method: 'GET'
+}
+API REQUEST {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  method: 'GET'
+}
+API RESPONSE {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /emergency/incidents?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+API RESPONSE {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /alerts/missing-persons?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+ GET /api/auth/session 200 in 478ms
+ GET /admin/dashboard?_rsc=84jn9 200 in 481ms
+ ✓ Compiled in 451ms (364 modules)
+API REQUEST {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  method: 'GET'
+}
+API REQUEST {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  method: 'GET'
+}
+API RESPONSE {
+  url: 'http://localhost:7001/emergency/incidents?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /emergency/incidents?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+API RESPONSE {
+  url: 'http://localhost:7001/alerts/missing-persons?page=1',
+  status: 404,
+  body: {
+    message: 'Cannot GET /alerts/missing-persons?page=1',
+    error: 'Not Found',
+    statusCode: 404
+  }
+}
+ GET /admin/dashboard?_rsc=84jn9 200 in 26ms
+ ○ Compiling /admin/missing-persons ...
+ ✓ Compiled /admin/missing-persons in 1296ms (1039 modules)
+ ✓ Compiled in 1136ms (1053 modules)
+ GET /admin/missing-persons?_rsc=1cs6r 200 in 79ms
+ ✓ Compiled in 338ms (380 modules)
+ GET /admin/missing-persons?_rsc=1cs6r 200 in 40ms
+ GET /api/auth/session 200 in 67ms
+ GET /api/auth/csrf 200 in 18ms
+ POST /api/auth/signout 200 in 12ms
+ ✓ Compiled in 684ms (380 modules)
+ ✓ Compiled in 393ms (380 modules)
+ ✓ Compiled in 2.7s (1049 modules)
+ ✓ Compiled in 389ms (380 modules)
+ ✓ Compiled in 251ms (380 modules)
+ ✓ Compiled in 195ms (380 modules)
+ ✓ Compiled in 359ms (380 modules)
